@@ -1,0 +1,20 @@
+import React from 'react';
+
+function BookList({ books }) {
+  return (
+    <>
+      <h2>Books</h2>
+      <ul>
+        {books.map(book => (
+          <li key={book.title}>
+            <div>Title: {book.title}</div>
+            <div>Author: {book.author}</div>
+            <div>Price: ${book.price.toFixed(2)}</div>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export default BookList;

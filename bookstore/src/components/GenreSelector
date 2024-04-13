@@ -1,0 +1,17 @@
+import React from 'react';
+
+function GenreSelector({ setSelectedGenre }) {
+  const genres = ['fiction', 'non-fiction', 'children'];
+
+  return (
+    <>
+      {genres.map(genre => (
+        <button key={genre} onClick={() => setSelectedGenre(genre)}>
+          {genre}
+        </button>
+      ))}
+    </>
+  );
+}
+
+export default GenreSelector;
